@@ -10,13 +10,6 @@ Liberty Bell が流れている間、ひたすら SPAM 缶 を SPAM しましょ
 
 このリポジトリは学習目的で作成したものです。</br>
 このリポジトリに含まれる一切を使用したことによに発生した不具合、損害等について製作者は一切の責任を負いません。</br>
-それぞれのインストール方法については各公式サイトを参照してください。
-
-- Python</br>
-  https://www.python.org/
-
-- pygame</br>
-  https://www.pygame.org/news
 
 ## 遊び方
 
@@ -24,6 +17,17 @@ Liberty Bell が流れている間、ひたすら SPAM 缶 を SPAM しましょ
 
 このゲームは Python と Python 向けのゲームライブラリ pygame を使用しています。</br>
 お使いの環境にインストールしてから起動してください。</br>
+インストール方法については各公式サイトを参照してください。
+
+- Python</br>
+  https://www.python.org/
+
+- pygame</br>
+  https://www.pygame.org/news
+
+※注意</br>
+MacOS 環境では pygame 1.9.6 がうまく動作しないことがあります。</br>
+その場合は手動で最新の pygame をインストールしてください。
 
 ### 起動方法
 
