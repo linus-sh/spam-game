@@ -33,7 +33,8 @@ def main():
     # set window size
     screen = pygame.display.set_mode((window_width, window_higth))
     # set window title
-    pygame.display.set_caption("SPAM SPAM SPAM")
+    title = "Do you like SPAM?"
+    pygame.display.set_caption(title)
 
     #  setup fps
     fps_controll = pygame.time.Clock()
@@ -46,23 +47,35 @@ def main():
     background_size = background.get_rect()
 
     # set title
-    title_font = pygame.font.SysFont(None, 80)
+    title_font = pygame.font.SysFont(None, 100)
     title_text = title_font.render(
-        "Do you like SPAM ?", True, (255, 0, 0))
+        title, True, (255, 0, 0))
 
     # set score board
     score = 0
 
+    # setup text font
+    text_font = pygame.font.SysFont(None, 80)
+
     # setup score board
-    score_board = pygame.font.SysFont(None, 80)
-    score_board_text = score_board.render("", True, (0, 0, 0))
+    score_board_text = text_font.render(
+        "Score : " + str(score), True, (0, 0, 0))
 
     # set hight score board
     hight_score = 0
 
-    # setup score board
-    hight_score_board = pygame.font.SysFont(None, 80)
-    higth_score_board_text = hight_score_board.render("", True, (0, 0, 0))
+    # setup high score board
+    higth_score_board_text = text_font.render(
+        "High Score : " + str(hight_score), True, (0, 0, 0))
+
+    # setup restart board
+    restart_text = text_font.render(
+        "", True, (0, 0, 0))
+
+    # setup update record board
+    update_record_text = text_font.render("", True, (0, 0, 0))
+
+    # setup timeup
 
     # outside position
     outside_screen_posx_xy = 1500
@@ -96,10 +109,19 @@ def main():
         screen.blit(background, background_size)
 
         # title load
-        screen.blit(title_text, (250, 100))
+        screen.blit(title_text, (200, 100))
 
         # score board load
-        screen.blit(score_board_text, (100, 20))
+        screen.blit(score_board_text, (70, 15))
+
+        # high socre board load
+        screen.blit(higth_score_board_text, (440, 15))
+
+        # restart comment load
+        screen.blit(restart_text, (50, 600))
+
+        # update_record load
+        screen.blit(update_record_text, (50, 150))
 
         # main start spam load
         main_spam.draw(screen)
@@ -122,10 +144,10 @@ def main():
                     # overwrite title ,
                     title_text = title_font.render("", True, (255, 0, 0))
                     screen.blit(title_text, (0, 0))
-                    # overwrite score board on inside of screen
-                    score_board_text = score_board.render(
+                    # init score
+                    score = 0
+                    score_board_text = text_font.render(
                         "Score : " + str(score), True, (0, 0, 0))
-                    screen.blit(score_board_text, (0, 0))
 
                     # move main spam to out side of screen
                     main_spam.update(outside_screen_posx_xy,
@@ -133,17 +155,25 @@ def main():
                     game_start = True
                     playing_spam.update(
                         playing_spam_pos_init_x, playing_spam_pos_init_y)
+
+                    # delete unnecessary text while playing
+                    restart_text = text_font.render("", True, (0, 0, 0))
+                    screen.blit(restart_text, (0, 0))
+                    update_record_text = text_font.render(
+                        "", True, (0, 0, 0))
+                    screen.blit(update_record_text, (0, 0))
+
                     # start timer
                     game_timer = pygame.time.get_ticks()
 
                 # ゲーム開始中
                 elif game_start and playing_spam.rect.collidepoint(event.pos) and pygame.time.get_ticks() - game_timer < 30000:
-                    playing_spam_pos_x = random.randrange(960 - 100)
-                    playing_spam_pos_y = random.randrange(720 - 100)
+                    playing_spam_pos_x = random.randrange(window_width - 100)
+                    playing_spam_pos_y = random.randrange(window_higth - 100)
                     playing_spam.update(playing_spam_pos_x,
                                         playing_spam_pos_y)
                     score += 1
-                    score_board_text = score_board.render(
+                    score_board_text = text_font.render(
                         "Score : " + str(score), True, (0, 0, 0))
                     screen.blit(score_board_text, (0, 0))
                     if score % 5 == 0:
@@ -151,10 +181,27 @@ def main():
                     else:
                         spam_voice_1.play()
                 elif game_start and pygame.time.get_ticks() - game_timer > 30000:
+                    # ゲーム停止状態に遷移
                     game_start = False
-                    # ゲームリスターと
-                    # ハイスコア
-                    # カウントダウン
+                    # ゲーム終了表示、3秒待つ
+                    pygame.time.delay(2000)
+                    # ハイスコア表示、 ゲームリスタート用に元画像表示
+                    if hight_score < score:
+                        hight_score = score
+                        higth_score_board_text = text_font.render(
+                            "High Score : " + str(hight_score), True, (0, 0, 0))
+                        screen.blit(higth_score_board_text, (0, 0))
+                        update_record_text = text_font.render(
+                            "You got the highest score!!!", True, (255, 0, 0))
+                        screen.blit(update_record_text, (0, 0))
+
+                    # リプレイ表示描写
+                    playing_spam.update(
+                        outside_screen_posx_xy, outside_screen_posx_xy)
+                    main_spam.update(main_spam_init_x, main_spam_init_y)
+                    restart_text = text_font.render(
+                        "More SPAM? Click SPAM Again!!", True, (255, 0, 0))
+                    screen.blit(restart_text, (0, 0))
 
 
 # 終了判定メソッド
