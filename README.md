@@ -2,7 +2,8 @@
 
 ## 概要
 
-Python と pygame を利用して作成した簡単なクリックゲームです。Monty Python に敬意を払った内容にしました。</br>
+Python と pygame を利用して作成した簡単なクリックゲームです。<br>
+プログラミング言語 Python の語源たるイギリスのコメディグループ Monty Python に敬意を払って、彼らの有名スケッチ模した内容にしました。</br>
 画面内に表示される SPAM 缶をひたすらクリックするゲームです。</br>
 Liberty Bell が流れている間、ひたすら SPAM 缶 を SPAM しましょう。</br>
 
@@ -26,7 +27,7 @@ Liberty Bell が流れている間、ひたすら SPAM 缶 を SPAM しましょ
   https://www.pygame.org/news
 
 ※注意</br>
-MacOS 環境では pygame 1.9.6 がうまく動作しないことがあります。</br>
+リポジトリ作成時点では pygame の最新安定版は 1.9.6 ですが、MacOS 環境では pygame 1.9.6 がうまく動作しないことがあります。</br>
 その場合は最新の pygame をインストールしてください。
 
 ### 起動方法
