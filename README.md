@@ -36,15 +36,15 @@ Liberty Bell が流れている間、ひたすら SPAM 缶 を SPAM しましょ
 
 ### 遊び方
 
-- 起動すると”Do you like SPAM ?”の文字とともに、SPAM 缶が表示されます。SPAM 缶をクリックするとゲーム開始です。</br>
+- 起動すると以下の様な画面が表示されます。SPAM 缶をクリックするとゲーム開始です。</br>
   ![Start](./screen_shot/play_01.png)
 - ゲームを開始すると Libety Bell の曲とともに SPAM 缶が画面内にランダムに表示されます。</br> ![Start](./screen_shot/play_02.png)
 
 - 制限時間内に画面内の SPAM 缶をひたすらクリックしてください。制限時間は 30 秒です。</br>
-- 時間内にクリックした SPAM 缶の数がそのままスコアとなります。</br>
+時間内にクリックした SPAM 缶の数がそのままスコアとなります。</br>
   ![Start](./screen_shot/play_03.png)
 
-- ゲーム終了後、SPAM 缶をクリックすると再度プレイできます。</br>
+- ゲーム終了後、最終スコアとハイスコアを確認できます。SPAM 缶をクリックすると再度プレイできます。</br>
   ![Start](./screen_shot/play_04.png)
 
 ## 開発環境 / 使用技術
