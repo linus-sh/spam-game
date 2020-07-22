@@ -1,5 +1,7 @@
 # Do you like SPAM?
 
+![SPAM](./image/SPAM3.png)
+
 ## 概要
 
 Python と pygame を利用して作成した簡単なクリックゲームです。<br>
@@ -20,27 +22,30 @@ Liberty Bell が流れている間、ひたすら SPAM 缶 を SPAM しましょ
 お使いの環境にインストールしてから起動してください。</br>
 インストール方法については各公式サイトを参照してください。
 
-- Python</br>
-  https://www.python.org/
-
-- pygame</br>
-  https://www.pygame.org/news
+- [Python](https://www.python.org/)
+- [pygame](https://www.pygame.org/news)
 
 ※注意</br>
 リポジトリ作成時点では pygame の最新安定版は 1.9.6 ですが、MacOS 環境では pygame 1.9.6 がうまく動作しないことがあります。</br>
-その場合は最新の pygame をインストールしてください。
+その場合は 2.0 以降の pygame をインストールしてください。
 
 ### 起動方法
 
-このリポジトリをダウンロード後、ターミナルでこのリポジトリのフォルダに移動し、</br>`python spam-game.py`を実行してください
+このリポジトリをダウンロード後、ターミナルでこのリポジトリのフォルダに移動し、</br>
+`python spam-game.py`を実行してください。
 
 ### 遊び方
 
-起動すると”Do you like SPAM?”の文字とともに、SPAM 缶が表示されます。SPAM 缶をクリックするとゲーム開始です。</br>
-ゲームを開始すると Libety Bell の曲とともに SPAM 缶が画面内にランダムに表示されます。</br>
-制限時間内に画面内の SPAM 缶をひたすらクリックしてください。制限時間は 30 秒です。</br>
-時間内にクリックした SPAM 缶の数がそのままスコアとなります。</br>
-ゲーム終了後、SPAM 缶をクリックすると再度プレイできます。</br>
+- 起動すると”Do you like SPAM ?”の文字とともに、SPAM 缶が表示されます。SPAM 缶をクリックするとゲーム開始です。</br>
+  ![Start](./screen_shot/play_01.png)
+- ゲームを開始すると Libety Bell の曲とともに SPAM 缶が画面内にランダムに表示されます。</br> ![Start](./screen_shot/play_02.png)
+
+- 制限時間内に画面内の SPAM 缶をひたすらクリックしてください。制限時間は 30 秒です。</br>
+- 時間内にクリックした SPAM 缶の数がそのままスコアとなります。</br>
+  ![Start](./screen_shot/play_03.png)
+
+- ゲーム終了後、SPAM 缶をクリックすると再度プレイできます。</br>
+  ![Start](./screen_shot/play_04.png)
 
 ## 開発環境 / 使用技術
 
