@@ -1,6 +1,6 @@
 # Do you like SPAM?
 
-![SPAM](./image/SPAM3.png)
+![SPAM](./image/spam3.png)
 
 ## 概要
 
