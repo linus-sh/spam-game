@@ -4,10 +4,11 @@
 
 ## 概要
 
-Python と pygame を利用して作成した簡単なクリックゲームです。<br>
-プログラミング言語 Python の語源たるイギリスのコメディグループ Monty Python に敬意を払って、彼らの有名スケッチ模した内容にしました。</br>
+Python で作成した簡単なクリックゲームです。<br>
+プログラミング言語 Python の語源たるイギリスのコメディグループ Monty Python に敬意を払って、<br>
+彼らの有名スケッチ模した内容にしました。</br>
 画面内に表示される SPAM 缶をひたすらクリックするゲームです。</br>
-Liberty Bell が流れている間、ひたすら SPAM 缶 を SPAM しましょう。</br>
+Liberty Bell の曲が流れている間、ひたすら SPAM 缶 を SPAM しましょう。</br>
 
 ## 免責事項
 
@@ -41,7 +42,7 @@ Liberty Bell が流れている間、ひたすら SPAM 缶 を SPAM しましょ
 - ゲームを開始すると Libety Bell の曲とともに SPAM 缶が画面内にランダムに表示されます。</br> ![Start](./screen_shot/play_02.png)
 
 - 制限時間内に画面内の SPAM 缶をひたすらクリックしてください。制限時間は 30 秒です。</br>
-時間内にクリックした SPAM 缶の数がそのままスコアとなります。</br>
+  時間内にクリックした SPAM 缶の数がそのままスコアとなります。</br>
   ![Start](./screen_shot/play_03.png)
 
 - ゲーム終了後、最終スコアとハイスコアを確認できます。SPAM 缶をクリックすると再度プレイできます。</br>
@@ -51,9 +52,9 @@ Liberty Bell が流れている間、ひたすら SPAM 缶 を SPAM しましょ
 
 ### 開発環境
 
-- MacBookPro 2014 mid 15inch
-- macOSX vsesion 10.14.6
-- VSCode for mac 1.46.1
+- MacBookPro Mid 2014 15inch
+- macOSX Version 10.14.6
+- Visual Studio Code for mac 1.46.1
 
 ### 使用技術
 
