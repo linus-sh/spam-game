@@ -21,15 +21,19 @@ LibertyBellの曲が流れている間、ひたすらSPAM缶をSPAMしましょ�
 
 このゲームはPythonとPython向けのゲームライブラリpygameを使用しています。</br>
 お使いの環境にインストールしてから起動してください。</br>
-QiitaでMac環境でのPython環境構築についてまとめましたが、詳細については各公式サイトで確認して下さい。<br>
+インストール方法については各公式サイトを参照して下さい、
 
-* [MacOS CatalinaにPythonとPython向けライブラリをインストールする - Qiita](https://qiita.com/linus_sh/items/f46d3abc7a854706f72e)
 * [Python](https://www.python.org/)
 * [pygame](https://www.pygame.org/news)
 
 ※注意</br>
 リポジトリ作成時点ではpygameの最新安定版は1.9.6ですが、MacOS環境ではpygame1.9.6がうまく動作しないことがあります。</br>
 その場合は2.0以降のpygameをインストールしてください。</br>
+
+※追記</br>
+QiitaでMac環境でのPython環境構築についてまとめました。Mac環境でうまく行かないときは参考にして下さい。<br>
+
+* [MacOS CatalinaにPythonとPython向けライブラリをインストールする - Qiita](https://qiita.com/linus_sh/items/f46d3abc7a854706f72e)
 
 ### 起動方法
 
