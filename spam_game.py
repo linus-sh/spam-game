@@ -14,7 +14,7 @@ window_higth = 720
 class Spam(pygame.sprite.Sprite):
     def __init__(self, pos_x, pos_y):
         pygame.sprite.Sprite.__init__(self)
-        self.image = pygame.image.load("./image/spam3.png")
+        self.image = pygame.image.load("./image/spam.png")
         self.image_size = self.image.get_rect()
         self.pos_x = pos_x
         self.pos_y = pos_y
@@ -75,8 +75,6 @@ def main():
     # setup update record board
     update_record_text = text_font.render("", True, (0, 0, 0))
 
-    # setup timeup
-
     # outside position
     outside_screen_posx_xy = 1500
 
@@ -125,6 +123,7 @@ def main():
 
         # main start spam load
         main_spam.draw(screen)
+
         # play spam load
         playing_spam.draw(screen)
         # 終了判定
@@ -211,7 +210,7 @@ def terminate():
 
 
 def checkForQuit():
-    for event in pygame.event.get(QUIT):  # get all the QUIT events
+    for event in pygame.event.get(QUIT):
         terminate()  # terminate if any QUIT events are present
     for event in pygame.event.get(KEYUP):  # get all the KEYUP events
         if event.key == K_ESCAPE:
