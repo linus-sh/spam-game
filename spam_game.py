@@ -1,16 +1,15 @@
+# import libraries
 import pygame
 import sys
 import time
 import random
 from pygame.locals import *
 
-# set setting variable
+# setup variables for windows size
 window_width = 960
 window_higth = 720
 
-# create spam class
-
-
+# create spam image class
 class Spam(pygame.sprite.Sprite):
     def __init__(self, pos_x, pos_y):
         pygame.sprite.Sprite.__init__(self)
@@ -26,12 +25,14 @@ class Spam(pygame.sprite.Sprite):
     def update(self, new_x, new_y):
         self.rect = pygame.Rect((new_x, new_y), self.image_size.size)
 
-
+# Main Method
 def main():
     # initialize pygame
     pygame.init()
+
     # set window size
     screen = pygame.display.set_mode((window_width, window_higth))
+
     # set window title
     title = "Do you like SPAM?"
     pygame.display.set_caption(title)
@@ -76,7 +77,7 @@ def main():
     update_record_text = text_font.render("", True, (0, 0, 0))
 
     # outside position
-    outside_screen_posx_xy = 1500
+    outside_screen_pos_xy = 1500
 
     # craete main spam
     main_spam_init_x = 540
@@ -86,7 +87,7 @@ def main():
     # playing spam
     playing_spam_pos_init_x = random.randrange(960 - 100)
     playing_spam_pos_init_y = random.randrange(720 - 100)
-    playing_spam = Spam(outside_screen_posx_xy, outside_screen_posx_xy)
+    playing_spam = Spam(outside_screen_pos_xy, outside_screen_pos_xy)
 
     # load bgm
     bgm = pygame.mixer.Sound("./sound/liberty_bell.mp3")
@@ -126,6 +127,7 @@ def main():
 
         # play spam load
         playing_spam.draw(screen)
+ 
         # 終了判定
         checkForQuit()
 
@@ -149,8 +151,8 @@ def main():
                         "Score : " + str(score), True, (0, 0, 0))
 
                     # move main spam to out side of screen
-                    main_spam.update(outside_screen_posx_xy,
-                                     outside_screen_posx_xy)
+                    main_spam.update(outside_screen_pos_xy,
+                                     outside_screen_pos_xy)
                     game_start = True
                     playing_spam.update(
                         playing_spam_pos_init_x, playing_spam_pos_init_y)
@@ -196,7 +198,7 @@ def main():
 
                     # リプレイ表示描写
                     playing_spam.update(
-                        outside_screen_posx_xy, outside_screen_posx_xy)
+                        outside_screen_pos_xy, outside_screen_pos_xy)
                     main_spam.update(main_spam_init_x, main_spam_init_y)
                     restart_text = text_font.render(
                         "More SPAM? Click SPAM Again!!", True, (255, 0, 0))
