@@ -1,14 +1,14 @@
 # Do you like SPAM?
 
-![SPAM](./image/spam3.png)
+![SPAM](./image/spam.png)
 
 ## 概要
 
-Python で作成した簡単なクリックゲームです。<br>
-プログラミング言語 Python の語源たるイギリスのコメディグループ Monty Python に敬意を払って、<br>
+Pythonで作成した簡単なクリックゲームです。<br>
+プログラミング言語Pythonの語源たるイギリスのコメディグループMontyPythonに敬意を払って、<br>
 彼らの有名スケッチ模した内容にしました。</br>
-画面内に表示される SPAM 缶をひたすらクリックするゲームです。</br>
-Liberty Bell の曲が流れている間、ひたすら SPAM 缶 を SPAM しましょう。</br>
+画面内に表示されるSPAM缶をひたすらクリックするゲームです。</br>
+LibertyBellの曲が流れている間、ひたすらSPAM缶をSPAMしましょう。</br>
 
 ## 免責事項
 
@@ -19,44 +19,52 @@ Liberty Bell の曲が流れている間、ひたすら SPAM 缶 を SPAM しま
 
 ### 必要条件
 
-このゲームは Python と Python 向けのゲームライブラリ pygame を使用しています。</br>
+このゲームはPythonとPython向けのゲームライブラリpygameを使用しています。</br>
 お使いの環境にインストールしてから起動してください。</br>
-インストール方法については各公式サイトを参照してください。
+QiitaでMac環境でのPython環境構築についてまとめましたが、詳細については各公式サイトで確認して下さい。<br>
 
-- [Python](https://www.python.org/)
-- [pygame](https://www.pygame.org/news)
+* [MacOS CatalinaにPythonとPython向けライブラリをインストールする - Qiita](https://qiita.com/linus_sh/items/f46d3abc7a854706f72e)
+* [Python](https://www.python.org/)
+* [pygame](https://www.pygame.org/news)
 
 ※注意</br>
-リポジトリ作成時点では pygame の最新安定版は 1.9.6 ですが、MacOS 環境では pygame 1.9.6 がうまく動作しないことがあります。</br>
-その場合は 2.0 以降の pygame をインストールしてください。
+リポジトリ作成時点ではpygameの最新安定版は1.9.6ですが、MacOS環境ではpygame1.9.6がうまく動作しないことがあります。</br>
+その場合は2.0以降のpygameをインストールしてください。</br>
 
 ### 起動方法
 
 このリポジトリをダウンロード後、ターミナルでこのリポジトリのフォルダに移動し、</br>
-`python spam-game.py`を実行してください。
+`python spam-game.py` を実行してください。</br>
 
 ### 遊び方
 
-- 起動すると以下の様な画面が表示されます。SPAM 缶をクリックするとゲーム開始です。</br>
-  ![Start](./screen_shot/play_01.png)
-- ゲームを開始すると Libety Bell の曲とともに SPAM 缶が画面内にランダムに表示されます。</br> ![Start](./screen_shot/play_02.png)
+* 起動すると以下の様な画面が表示されます。SPAM缶をクリックするとゲーム開始です。</br>
 
-- 制限時間内に画面内の SPAM 缶をひたすらクリックしてください。制限時間は 30 秒です。</br>
-  時間内にクリックした SPAM 缶の数がそのままスコアとなります。</br>
-  ![Start](./screen_shot/play_03.png)
+![Start](./screen_shot/play_01.png)
 
-- ゲーム終了後、最終スコアとハイスコアを確認できます。SPAM 缶をクリックすると再度プレイできます。</br>
-  ![Start](./screen_shot/play_04.png)
+* ゲームを開始するとLibetyBellの曲とともにSPAM缶が画面内にランダムに表示されます。</br>
+
+![Start](./screen_shot/play_02.png)
+
+* 制限時間内に画面内のSPAM缶をひたすらクリックしてください。制限時間は30秒です。</br>
+
+時間内にクリックしたSPAM缶の数がそのままスコアとなります。</br>
+
+![Start](./screen_shot/play_03.png)
+
+* ゲーム終了後、最終スコアとハイスコアを確認できます。SPAM缶をクリックすると再度プレイできます。</br>
+
+![Start](./screen_shot/play_04.png)
 
 ## 開発環境 / 使用技術
 
 ### 開発環境
 
-- MacBookPro Mid 2014 15inch
-- macOSX Version 10.14.6
-- Visual Studio Code for mac 1.46.1
+* MacBookPro Mid 2014 15inch
+* macOSX Version 10.14.6
+* Visual Studio Code for mac 1.46.1
 
 ### 使用技術
 
-- Python 3.8.3 64bit
-- pygame 2.0.0.dev10
+* Python 3.8.3 64bit
+* pygame 2.0.0.dev10
